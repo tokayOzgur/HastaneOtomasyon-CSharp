@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="FrmBrans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmDoktorBilgiDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmDoktorDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmDoktorDuyurular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmDoktorGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmDoktorPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmGirisler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmHastaBilgiDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmHastaDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmHastaGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmHastaKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmRandevuListe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmSekreterDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmSekreterGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

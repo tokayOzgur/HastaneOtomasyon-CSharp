@@ -13,7 +13,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
 
             //SqlConnection connect = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=HastaneOtomasyon;Integrated Security=True;");
 
-            SqlConnection connect = new SqlConnection("Data Source=DESKTOP-DR83AEK\\SQLEXPRESS;Initial Catalog=HastaneOtomasyon;Integrated Security=True;");
+            SqlConnection connect = new SqlConnection("Data Source=DESKTOP-DR83AEK\\SQLEXPRESS;Initial Catalog=HastaneOtomasyon;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             
             connect.Open();
 

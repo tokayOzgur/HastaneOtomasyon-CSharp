@@ -22,6 +22,18 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
         {
             SqlCommand sqlCommand = new SqlCommand("insert into Hastalar (HastaAd, HastaSoyad, HastaTC, HastaTelefon, HastaSifre, HastaCinsiyet)" +
                 " values (@p1,@p2,@p3,@p4,@p5,@p6)", sqlBaglantisi.Connection());
+
+            sqlCommand.Parameters.AddWithValue("@p1", txtIsim.Text);
+            sqlCommand.Parameters.AddWithValue("@p1", txtSoyisim.Text);
+            sqlCommand.Parameters.AddWithValue("@p1", mskTc.Text);
+            sqlCommand.Parameters.AddWithValue("@p1", mskTelefon.Text);
+            sqlCommand.Parameters.AddWithValue("@p1", txtSifre.Text);
+            sqlCommand.Parameters.AddWithValue("@p1", cmbCinsiyet.Text);
+
+
+            sqlBaglantisi.Connection().Close();
+            MessageBox.Show("Kayıt işlemi başarılı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
     }
 }

@@ -454,27 +454,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\azder\\.nuget\\packages\\": {},
+    "C:\\Users\\user\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Orenda\\Projeler\\CSharp-Otomasyon\\HastaneYönetimVeRandevuSistemiOtomasyonu\\Hastane Yönetim Ve Randevu Sistemi Otomasyonu\\Hastane Yönetim Ve Randevu Sistemi Otomasyonu.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\GitHub\\HastaneOtomasyon-CSharp\\CSharp-Otomasyon\\HastaneYönetimVeRandevuSistemiOtomasyonu\\Hastane Yönetim Ve Randevu Sistemi Otomasyonu\\Hastane Yönetim Ve Randevu Sistemi Otomasyonu.csproj",
       "projectName": "Hastane Yönetim Ve Randevu Sistemi Otomasyonu",
-      "projectPath": "E:\\Orenda\\Projeler\\CSharp-Otomasyon\\HastaneYönetimVeRandevuSistemiOtomasyonu\\Hastane Yönetim Ve Randevu Sistemi Otomasyonu\\Hastane Yönetim Ve Randevu Sistemi Otomasyonu.csproj",
-      "packagesPath": "C:\\Users\\azder\\.nuget\\packages\\",
-      "outputPath": "E:\\Orenda\\Projeler\\CSharp-Otomasyon\\HastaneYönetimVeRandevuSistemiOtomasyonu\\Hastane Yönetim Ve Randevu Sistemi Otomasyonu\\obj\\",
+      "projectPath": "C:\\Users\\user\\Desktop\\GitHub\\HastaneOtomasyon-CSharp\\CSharp-Otomasyon\\HastaneYönetimVeRandevuSistemiOtomasyonu\\Hastane Yönetim Ve Randevu Sistemi Otomasyonu\\Hastane Yönetim Ve Randevu Sistemi Otomasyonu.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\GitHub\\HastaneOtomasyon-CSharp\\CSharp-Otomasyon\\HastaneYönetimVeRandevuSistemiOtomasyonu\\Hastane Yönetim Ve Randevu Sistemi Otomasyonu\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\azder\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"

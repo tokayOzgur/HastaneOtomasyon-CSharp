@@ -14,5 +14,11 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
         {
             InitializeComponent();
         }
+
+        SqlBaglantisi sqlBaglantisi = new SqlBaglantisi();
+        private void btnGiris_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

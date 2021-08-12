@@ -47,13 +47,14 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.btnGiris.TabIndex = 17;
             this.btnGiris.Text = "Giriş Yap";
             this.btnGiris.UseVisualStyleBackColor = false;
+            this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
             // txtSifre
             // 
             this.txtSifre.Location = new System.Drawing.Point(244, 221);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.PasswordChar = '*';
-            this.txtSifre.Size = new System.Drawing.Size(226, 35);
+            this.txtSifre.Size = new System.Drawing.Size(226, 39);
             this.txtSifre.TabIndex = 16;
             // 
             // mskTc
@@ -61,7 +62,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.mskTc.Location = new System.Drawing.Point(244, 166);
             this.mskTc.Mask = "00000000000";
             this.mskTc.Name = "mskTc";
-            this.mskTc.Size = new System.Drawing.Size(226, 35);
+            this.mskTc.Size = new System.Drawing.Size(226, 39);
             this.mskTc.TabIndex = 15;
             this.mskTc.ValidatingType = typeof(int);
             // 
@@ -70,7 +71,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(125, 221);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 30);
+            this.label3.Size = new System.Drawing.Size(69, 32);
             this.label3.TabIndex = 12;
             this.label3.Text = "Şifre:";
             // 
@@ -79,7 +80,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(30, 169);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 30);
+            this.label2.Size = new System.Drawing.Size(164, 32);
             this.label2.TabIndex = 13;
             this.label2.Text = "TC Kimlik NO:";
             // 
@@ -90,13 +91,13 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(16, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(337, 47);
+            this.label1.Size = new System.Drawing.Size(382, 54);
             this.label1.TabIndex = 14;
             this.label1.Text = "Sekreter Giriş Paneli";
             // 
             // FrmSekreterGiris
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(502, 408);

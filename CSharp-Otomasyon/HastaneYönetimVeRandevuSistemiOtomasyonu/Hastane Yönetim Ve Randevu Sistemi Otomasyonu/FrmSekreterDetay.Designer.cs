@@ -60,9 +60,9 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.btnDoktorPanel = new System.Windows.Forms.Button();
-            this.btnBransPanel = new System.Windows.Forms.Button();
             this.btnRandevuListe = new System.Windows.Forms.Button();
+            this.btnBransPanel = new System.Windows.Forms.Button();
+            this.btnDoktorPanel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -215,6 +215,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.btnKaydet.TabIndex = 5;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = false;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // chkOnay
             // 
@@ -242,6 +243,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.cmbBrans.Name = "cmbBrans";
             this.cmbBrans.Size = new System.Drawing.Size(241, 40);
             this.cmbBrans.TabIndex = 3;
+            this.cmbBrans.SelectedIndexChanged += new System.EventHandler(this.cmbBrans_SelectedIndexChanged);
             // 
             // mskSaat
             // 
@@ -363,6 +365,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 35);
@@ -384,6 +387,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(3, 35);
@@ -405,16 +409,16 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Hızlı Erişim";
             // 
-            // btnDoktorPanel
+            // btnRandevuListe
             // 
-            this.btnDoktorPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnDoktorPanel.ForeColor = System.Drawing.Color.White;
-            this.btnDoktorPanel.Location = new System.Drawing.Point(13, 38);
-            this.btnDoktorPanel.Name = "btnDoktorPanel";
-            this.btnDoktorPanel.Size = new System.Drawing.Size(415, 50);
-            this.btnDoktorPanel.TabIndex = 6;
-            this.btnDoktorPanel.Text = " Doktor Paneli";
-            this.btnDoktorPanel.UseVisualStyleBackColor = false;
+            this.btnRandevuListe.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnRandevuListe.ForeColor = System.Drawing.Color.White;
+            this.btnRandevuListe.Location = new System.Drawing.Point(13, 150);
+            this.btnRandevuListe.Name = "btnRandevuListe";
+            this.btnRandevuListe.Size = new System.Drawing.Size(415, 50);
+            this.btnRandevuListe.TabIndex = 6;
+            this.btnRandevuListe.Text = " Randevu Liste";
+            this.btnRandevuListe.UseVisualStyleBackColor = false;
             // 
             // btnBransPanel
             // 
@@ -427,16 +431,16 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.btnBransPanel.Text = "Branş Paneli";
             this.btnBransPanel.UseVisualStyleBackColor = false;
             // 
-            // btnRandevuListe
+            // btnDoktorPanel
             // 
-            this.btnRandevuListe.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnRandevuListe.ForeColor = System.Drawing.Color.White;
-            this.btnRandevuListe.Location = new System.Drawing.Point(13, 150);
-            this.btnRandevuListe.Name = "btnRandevuListe";
-            this.btnRandevuListe.Size = new System.Drawing.Size(415, 50);
-            this.btnRandevuListe.TabIndex = 6;
-            this.btnRandevuListe.Text = " Randevu Liste";
-            this.btnRandevuListe.UseVisualStyleBackColor = false;
+            this.btnDoktorPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnDoktorPanel.ForeColor = System.Drawing.Color.White;
+            this.btnDoktorPanel.Location = new System.Drawing.Point(13, 38);
+            this.btnDoktorPanel.Name = "btnDoktorPanel";
+            this.btnDoktorPanel.Size = new System.Drawing.Size(415, 50);
+            this.btnDoktorPanel.TabIndex = 6;
+            this.btnDoktorPanel.Text = " Doktor Paneli";
+            this.btnDoktorPanel.UseVisualStyleBackColor = false;
             // 
             // FrmSekreterDetay
             // 
@@ -453,6 +457,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmSekreterDetay";
             this.Text = "Sekreter Detay Paneli";
+            this.Load += new System.EventHandler(this.FrmSekreterDetay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

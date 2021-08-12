@@ -32,7 +32,7 @@ CREATE TABLE Hastalar
 go
 CREATE TABLE Randevular
 (
-    RandevuId INT NOT NULL PRIMARY KEY,
+    RandevuId INT NOT NULL PRIMARY KEY identity,
     RandevuTarih VARCHAR(50) NULL,
     RandevuSaat VARCHAR(5) NULL,
     RandevuBrans VARCHAR(50) NULL,

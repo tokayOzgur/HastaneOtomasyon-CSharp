@@ -80,5 +80,21 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             }
             sqlBaglantisi.Connection().Close();
         }
+
+        private void btnDuyuruYayinla_Click(object sender, EventArgs e)
+        {
+            SqlCommand command = new SqlCommand("insert into Randevular (Duyuru) values (@p1)", sqlBaglantisi.Connection());
+            command.Parameters.AddWithValue("@p1", rtbDuyuru.Text);
+            command.ExecuteNonQuery();
+            sqlBaglantisi.Connection().Close();
+            MessageBox.Show("Duyuru yayına alındı.");
+        }
+
+        private void btnDoktorPanel_Click(object sender, EventArgs e)
+        {
+            FrmDoktorPanel frmDoktorPanel = new FrmDoktorPanel();
+            frmDoktorPanel.Show();
+            
+        }
     }
-}
+}   

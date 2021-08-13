@@ -51,6 +51,17 @@ CREATE TABLE Sekreterler
 
 GO
 
+
+-- Duyuru Tablosu
+CREATE TABLE Duyurular
+(
+    DuyuruId TINYINT NOT NULL PRIMARY KEY identity,
+    Duyuru VARCHAR(200) NULL
+)
+
+
+go
+
 -- insert sample values
 
 -- Branşlar Tablosu
@@ -149,7 +160,6 @@ INSERT INTO Sekreterler
     (SekreterAdSoyad,SekreterTC,SekreterSifre)
 VALUES
     ('Türkan Şoray', '20000000004', '1111');
-
 
 
 

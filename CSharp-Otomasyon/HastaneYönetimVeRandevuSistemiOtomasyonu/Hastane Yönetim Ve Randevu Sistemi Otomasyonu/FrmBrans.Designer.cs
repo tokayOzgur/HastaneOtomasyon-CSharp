@@ -29,6 +29,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBrans));
             this.btnSil = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -63,6 +64,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.btnGuncelle.TabIndex = 42;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // groupBox1
             // 
@@ -70,19 +72,20 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 15.70909F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(400, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(888, 413);
+            this.groupBox1.Size = new System.Drawing.Size(568, 413);
             this.groupBox1.TabIndex = 39;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Veriler";
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 35);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 31);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 47;
-            this.dataGridView1.Size = new System.Drawing.Size(882, 375);
+            this.dataGridView1.Size = new System.Drawing.Size(562, 379);
             this.dataGridView1.TabIndex = 0;
             // 
             // btnKaydet
@@ -93,15 +96,15 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(352, 71);
             this.btnKaydet.TabIndex = 43;
-            this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.Text = "Ekle";
             this.btnKaydet.UseVisualStyleBackColor = false;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // txtIsim
             // 
             this.txtIsim.Location = new System.Drawing.Point(155, 127);
             this.txtIsim.Name = "txtIsim";
-            this.txtIsim.PasswordChar = '*';
-            this.txtIsim.Size = new System.Drawing.Size(226, 39);
+            this.txtIsim.Size = new System.Drawing.Size(226, 35);
             this.txtIsim.TabIndex = 38;
             // 
             // label3
@@ -109,7 +112,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(20, 127);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 32);
+            this.label3.Size = new System.Drawing.Size(104, 30);
             this.label3.TabIndex = 33;
             this.label3.Text = "Branş Ad:";
             // 
@@ -118,7 +121,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(29, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 32);
+            this.label2.Size = new System.Drawing.Size(96, 30);
             this.label2.TabIndex = 34;
             this.label2.Text = "Branş İd:";
             // 
@@ -127,14 +130,15 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.txtId.Location = new System.Drawing.Point(155, 72);
             this.txtId.Name = "txtId";
             this.txtId.PasswordChar = '*';
-            this.txtId.Size = new System.Drawing.Size(226, 39);
+            this.txtId.Size = new System.Drawing.Size(226, 35);
             this.txtId.TabIndex = 38;
             // 
             // FrmBrans
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 32F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1300, 442);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(980, 442);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.groupBox1);
@@ -144,9 +148,12 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmBrans";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmBrans";
+            this.Load += new System.EventHandler(this.FrmBrans_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -431,6 +431,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.btnBransPanel.TabIndex = 6;
             this.btnBransPanel.Text = "Branş Paneli";
             this.btnBransPanel.UseVisualStyleBackColor = false;
+            this.btnBransPanel.Click += new System.EventHandler(this.btnBransPanel_Click);
             // 
             // btnDoktorPanel
             // 

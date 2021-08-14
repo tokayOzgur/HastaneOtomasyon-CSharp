@@ -82,10 +82,10 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 31);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 35);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 47;
-            this.dataGridView1.Size = new System.Drawing.Size(562, 379);
+            this.dataGridView1.Size = new System.Drawing.Size(562, 375);
             this.dataGridView1.TabIndex = 0;
             // 
             // btnKaydet
@@ -104,7 +104,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             // 
             this.txtIsim.Location = new System.Drawing.Point(155, 127);
             this.txtIsim.Name = "txtIsim";
-            this.txtIsim.Size = new System.Drawing.Size(226, 35);
+            this.txtIsim.Size = new System.Drawing.Size(226, 39);
             this.txtIsim.TabIndex = 38;
             // 
             // label3
@@ -112,7 +112,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(20, 127);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 30);
+            this.label3.Size = new System.Drawing.Size(118, 32);
             this.label3.TabIndex = 33;
             this.label3.Text = "Branş Ad:";
             // 
@@ -121,7 +121,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(29, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 30);
+            this.label2.Size = new System.Drawing.Size(109, 32);
             this.label2.TabIndex = 34;
             this.label2.Text = "Branş İd:";
             // 
@@ -130,12 +130,12 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.txtId.Location = new System.Drawing.Point(155, 72);
             this.txtId.Name = "txtId";
             this.txtId.PasswordChar = '*';
-            this.txtId.Size = new System.Drawing.Size(226, 35);
+            this.txtId.Size = new System.Drawing.Size(226, 39);
             this.txtId.TabIndex = 38;
             // 
             // FrmBrans
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(980, 442);

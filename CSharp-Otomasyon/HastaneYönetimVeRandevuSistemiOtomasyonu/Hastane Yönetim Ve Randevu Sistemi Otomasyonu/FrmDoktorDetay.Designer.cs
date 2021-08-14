@@ -45,8 +45,8 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnGuncelle = new System.Windows.Forms.Button();
-            this.btnDuyurular = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnDuyurular = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -202,6 +202,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.dataGridView1.RowHeadersWidth = 47;
             this.dataGridView1.Size = new System.Drawing.Size(816, 764);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // groupBox4
             // 
@@ -223,15 +224,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.btnGuncelle.TabIndex = 5;
             this.btnGuncelle.Text = "Bilgilerini Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
-            // 
-            // btnDuyurular
-            // 
-            this.btnDuyurular.Location = new System.Drawing.Point(257, 59);
-            this.btnDuyurular.Name = "btnDuyurular";
-            this.btnDuyurular.Size = new System.Drawing.Size(232, 89);
-            this.btnDuyurular.TabIndex = 5;
-            this.btnDuyurular.Text = "Duyurular";
-            this.btnDuyurular.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnExit
             // 
@@ -241,6 +234,17 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.btnExit.TabIndex = 5;
             this.btnExit.Text = "Çıkış";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnDuyurular
+            // 
+            this.btnDuyurular.Location = new System.Drawing.Point(257, 59);
+            this.btnDuyurular.Name = "btnDuyurular";
+            this.btnDuyurular.Size = new System.Drawing.Size(232, 89);
+            this.btnDuyurular.TabIndex = 5;
+            this.btnDuyurular.Text = "Duyurular";
+            this.btnDuyurular.UseVisualStyleBackColor = true;
+            this.btnDuyurular.Click += new System.EventHandler(this.btnDuyurular_Click);
             // 
             // FrmDoktorDetay
             // 
@@ -256,6 +260,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.Name = "FrmDoktorDetay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Doktor Detay Formu";
+            this.Load += new System.EventHandler(this.FrmDoktorDetay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

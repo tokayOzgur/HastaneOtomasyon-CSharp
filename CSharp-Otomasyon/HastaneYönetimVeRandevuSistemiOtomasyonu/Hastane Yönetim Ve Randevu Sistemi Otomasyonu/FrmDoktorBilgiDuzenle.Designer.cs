@@ -52,6 +52,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.btnGiris.TabIndex = 37;
             this.btnGiris.Text = "Güncelle";
             this.btnGiris.UseVisualStyleBackColor = false;
+            this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
             // txtSifre
             // 
@@ -160,6 +161,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.Name = "FrmDoktorBilgiDuzenle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Doktor Bilgi Güncelle";
+            this.Load += new System.EventHandler(this.FrmDoktorBilgiDuzenle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

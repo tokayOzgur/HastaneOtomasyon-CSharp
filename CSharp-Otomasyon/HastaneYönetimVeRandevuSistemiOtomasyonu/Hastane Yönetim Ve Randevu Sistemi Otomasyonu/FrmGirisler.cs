@@ -28,7 +28,6 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
         private void btnDoktorGiris_Click(object sender, EventArgs e)
         {
             FrmDoktorGiris frmDoktorGiris = new FrmDoktorGiris();
-
             frmDoktorGiris.Show();
             this.Hide();
         }

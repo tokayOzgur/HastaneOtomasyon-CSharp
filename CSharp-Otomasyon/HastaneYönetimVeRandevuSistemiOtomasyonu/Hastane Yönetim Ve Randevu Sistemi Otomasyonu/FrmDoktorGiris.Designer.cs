@@ -46,6 +46,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.btnGiris.TabIndex = 11;
             this.btnGiris.Text = "Giriş Yap";
             this.btnGiris.UseVisualStyleBackColor = false;
+            this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
             // txtSifre
             // 
@@ -105,9 +106,10 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmDoktorGiris";
             this.Text = "FrmDoktorGiris";
+            this.Load += new System.EventHandler(this.FrmDoktorGiris_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

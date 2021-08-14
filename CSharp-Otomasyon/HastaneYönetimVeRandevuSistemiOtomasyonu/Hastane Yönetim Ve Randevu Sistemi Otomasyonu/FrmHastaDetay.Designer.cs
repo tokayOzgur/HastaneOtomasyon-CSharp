@@ -80,7 +80,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.lblAdSoyad.Font = new System.Drawing.Font("Segoe UI Semibold", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblAdSoyad.Location = new System.Drawing.Point(185, 124);
             this.lblAdSoyad.Name = "lblAdSoyad";
-            this.lblAdSoyad.Size = new System.Drawing.Size(95, 30);
+            this.lblAdSoyad.Size = new System.Drawing.Size(109, 32);
             this.lblAdSoyad.TabIndex = 0;
             this.lblAdSoyad.Text = "Null Null";
             // 
@@ -90,7 +90,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(13, 124);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 30);
+            this.label3.Size = new System.Drawing.Size(123, 32);
             this.label3.TabIndex = 0;
             this.label3.Text = "Ad Soyad:";
             // 
@@ -100,7 +100,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.lblTc.Font = new System.Drawing.Font("Segoe UI Semibold", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTc.Location = new System.Drawing.Point(185, 67);
             this.lblTc.Name = "lblTc";
-            this.lblTc.Size = new System.Drawing.Size(145, 30);
+            this.lblTc.Size = new System.Drawing.Size(157, 32);
             this.lblTc.TabIndex = 0;
             this.lblTc.Text = "00000000000";
             // 
@@ -110,7 +110,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(50, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 30);
+            this.label1.Size = new System.Drawing.Size(86, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "TC No:";
             // 
@@ -138,9 +138,10 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             // 
             // txtRandevuId
             // 
+            this.txtRandevuId.Enabled = false;
             this.txtRandevuId.Location = new System.Drawing.Point(194, 52);
             this.txtRandevuId.Name = "txtRandevuId";
-            this.txtRandevuId.Size = new System.Drawing.Size(351, 35);
+            this.txtRandevuId.Size = new System.Drawing.Size(351, 39);
             this.txtRandevuId.TabIndex = 6;
             // 
             // lnkBilgiDuzenle
@@ -148,7 +149,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.lnkBilgiDuzenle.AutoSize = true;
             this.lnkBilgiDuzenle.Location = new System.Drawing.Point(0, 462);
             this.lnkBilgiDuzenle.Name = "lnkBilgiDuzenle";
-            this.lnkBilgiDuzenle.Size = new System.Drawing.Size(158, 30);
+            this.lnkBilgiDuzenle.Size = new System.Drawing.Size(183, 32);
             this.lnkBilgiDuzenle.TabIndex = 5;
             this.lnkBilgiDuzenle.TabStop = true;
             this.lnkBilgiDuzenle.Text = "Bilgileri Düzenle";
@@ -162,6 +163,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.btnRandevuAl.TabIndex = 4;
             this.btnRandevuAl.Text = "Randevu Al";
             this.btnRandevuAl.UseVisualStyleBackColor = true;
+            this.btnRandevuAl.Click += new System.EventHandler(this.btnRandevuAl_Click);
             // 
             // rtbSikayet
             // 
@@ -175,7 +177,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             // 
             this.dtpTarih.Location = new System.Drawing.Point(194, 211);
             this.dtpTarih.Name = "dtpTarih";
-            this.dtpTarih.Size = new System.Drawing.Size(351, 35);
+            this.dtpTarih.Size = new System.Drawing.Size(351, 39);
             this.dtpTarih.TabIndex = 2;
             // 
             // label8
@@ -184,7 +186,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.Location = new System.Drawing.Point(77, 265);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 30);
+            this.label8.Size = new System.Drawing.Size(99, 32);
             this.label8.TabIndex = 0;
             this.label8.Text = "Şikayet:";
             // 
@@ -194,7 +196,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.Location = new System.Drawing.Point(10, 211);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(153, 30);
+            this.label7.Size = new System.Drawing.Size(175, 32);
             this.label7.TabIndex = 0;
             this.label7.Text = "Randevu Tarih:";
             // 
@@ -203,7 +205,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.cmbDoktor.FormattingEnabled = true;
             this.cmbDoktor.Location = new System.Drawing.Point(194, 155);
             this.cmbDoktor.Name = "cmbDoktor";
-            this.cmbDoktor.Size = new System.Drawing.Size(351, 38);
+            this.cmbDoktor.Size = new System.Drawing.Size(351, 40);
             this.cmbDoktor.TabIndex = 1;
             this.cmbDoktor.SelectedIndexChanged += new System.EventHandler(this.cmbDoktor_SelectedIndexChanged);
             // 
@@ -213,7 +215,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.Location = new System.Drawing.Point(76, 155);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(87, 30);
+            this.label6.Size = new System.Drawing.Size(97, 32);
             this.label6.TabIndex = 0;
             this.label6.Text = "Doktor:";
             // 
@@ -223,7 +225,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.lblRandevuId.Font = new System.Drawing.Font("Segoe UI Semibold", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblRandevuId.Location = new System.Drawing.Point(35, 57);
             this.lblRandevuId.Name = "lblRandevuId";
-            this.lblRandevuId.Size = new System.Drawing.Size(128, 30);
+            this.lblRandevuId.Size = new System.Drawing.Size(146, 32);
             this.lblRandevuId.TabIndex = 0;
             this.lblRandevuId.Text = "Randevu ID:";
             // 
@@ -232,7 +234,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.cmbBrans.FormattingEnabled = true;
             this.cmbBrans.Location = new System.Drawing.Point(194, 102);
             this.cmbBrans.Name = "cmbBrans";
-            this.cmbBrans.Size = new System.Drawing.Size(351, 38);
+            this.cmbBrans.Size = new System.Drawing.Size(351, 40);
             this.cmbBrans.TabIndex = 1;
             this.cmbBrans.SelectedIndexChanged += new System.EventHandler(this.cmbBrans_SelectedIndexChanged);
             // 
@@ -242,7 +244,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(92, 110);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 30);
+            this.label5.Size = new System.Drawing.Size(81, 32);
             this.label5.TabIndex = 0;
             this.label5.Text = "Branş:";
             // 
@@ -261,10 +263,10 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 31);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 35);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 47;
-            this.dataGridView1.Size = new System.Drawing.Size(821, 366);
+            this.dataGridView1.Size = new System.Drawing.Size(821, 362);
             this.dataGridView1.TabIndex = 0;
             // 
             // groupBox4
@@ -282,15 +284,16 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 31);
+            this.dataGridView2.Location = new System.Drawing.Point(3, 35);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 47;
-            this.dataGridView2.Size = new System.Drawing.Size(821, 294);
+            this.dataGridView2.Size = new System.Drawing.Size(821, 290);
             this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
             // FrmHastaDetay
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1400, 758);
             this.Controls.Add(this.groupBox4);

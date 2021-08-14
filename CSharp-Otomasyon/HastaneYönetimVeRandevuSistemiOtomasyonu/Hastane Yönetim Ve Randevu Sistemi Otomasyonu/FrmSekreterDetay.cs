@@ -102,5 +102,25 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             FrmBrans frmBrans = new FrmBrans();
             frmBrans.Show();
         }
+
+        private void btnRandevuListe_Click(object sender, EventArgs e)
+        {
+            FrmRandevuListe frmRandevuListe = new FrmRandevuListe();
+            frmRandevuListe.Show();
+        }
+        
+        // pass
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            //SqlCommand command = new SqlCommand("update Randevular set ",sqlBaglantisi.Connection());
+
+            //sqlBaglantisi.Connection().Close();
+        }
+
+        private void btnDuyuru_Click(object sender, EventArgs e)
+        {
+            FrmDoktorDuyurular duyurular = new FrmDoktorDuyurular();
+            duyurular.Show();
+        }
     }
 }   

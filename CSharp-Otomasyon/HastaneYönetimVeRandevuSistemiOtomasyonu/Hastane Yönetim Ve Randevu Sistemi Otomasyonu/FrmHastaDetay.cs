@@ -74,7 +74,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
         private void cmbDoktor_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable dataTable = new DataTable();
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("select * from Randevular where RandevuBrans='" + cmbBrans.Text + "'",sqlBaglantisi.Connection());
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("select * from Randevular where RandevuBrans='" + cmbBrans.Text + "'"+"and RandevuDoktor='"+cmbDoktor.Text+"' and RandevuDurum=0",sqlBaglantisi.Connection());
             sqlDataAdapter.Fill(dataTable);
             dataGridView2.DataSource = dataTable;
         }
@@ -85,6 +85,23 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             frmHastaBilgiDuzenle.tcNo = lblTc.Text; //tcNo ile diğer forma veri taşıdık
             frmHastaBilgiDuzenle.Show();
 
+        }
+
+        private void btnRandevuAl_Click(object sender, EventArgs e)
+        {
+            SqlCommand command = new SqlCommand("update Randevular set RandevuDurum=1, HastaTc=@p1,RandevuSikayet=@p2 where RandevuId=@p3", sqlBaglantisi.Connection());
+            command.Parameters.AddWithValue("@p1",lblTc.Text);
+            command.Parameters.AddWithValue("@p2",rtbSikayet.Text);
+            command.Parameters.AddWithValue("@p3",txtRandevuId.Text);
+            command.ExecuteNonQuery();
+            sqlBaglantisi.Connection().Close();
+            MessageBox.Show("Randevu Kaydı Başarılı.");
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int secilen = dataGridView2.SelectedCells[0].RowIndex;
+            txtRandevuId.Text = dataGridView2.Rows[secilen].Cells[0].Value.ToString();
         }
     }
 }

@@ -53,6 +53,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.btnSil.TabIndex = 41;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnGuncelle
             // 
@@ -87,6 +88,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.dataGridView1.RowHeadersWidth = 47;
             this.dataGridView1.Size = new System.Drawing.Size(562, 375);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnKaydet
             // 

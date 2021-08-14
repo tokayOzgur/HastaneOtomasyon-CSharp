@@ -25,11 +25,11 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             da2.Fill(dt2);
             dataGridView1.DataSource = dt2;
 
-            // branşları aktarma
-            DataTable dt1 = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("select * from Branslar", sqlBaglantisi.Connection());
-            da.Fill(dt1);
-            dataGridView1.DataSource = dt1;
+            //// branşları aktarma
+            //DataTable dt1 = new DataTable();
+            //SqlDataAdapter da = new SqlDataAdapter("select * from Branslar", sqlBaglantisi.Connection());
+            //da.Fill(dt1);
+            //dataGridView1.DataSource = dt1;
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)

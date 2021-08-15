@@ -35,5 +35,12 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             MessageBox.Show("Kayıt işlemi başarılı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
+
+        private void btnGoBack_Click(object sender, EventArgs e)
+        {
+            FrmHastaGiris frmHastaGiris = new FrmHastaGiris();
+            frmHastaGiris.Show();
+            this.Show();
+        }
     }
 }

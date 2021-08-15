@@ -83,5 +83,12 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
                 command.ExecuteNonQuery();
             }
         }
+
+        private void btnGoBack_Click(object sender, EventArgs e)
+        {
+            FrmSekreterDetay frmSekreterDetay = new FrmSekreterDetay();
+            frmSekreterDetay.Show();
+            this.Hide();
+        }
     }
 }

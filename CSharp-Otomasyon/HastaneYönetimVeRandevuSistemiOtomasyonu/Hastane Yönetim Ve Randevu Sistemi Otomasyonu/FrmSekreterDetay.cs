@@ -55,15 +55,30 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            SqlCommand command = new SqlCommand("insert into Randevular (RandevuTarih, RandevuSaat,RandevuBrans,Randevudoktor)" +
-                "values (@p1,@p2,@p3,@p4)", sqlBaglantisi.Connection());
-            command.Parameters.AddWithValue("@p1", mskTarih.Text);
-            command.Parameters.AddWithValue("@p2", mskSaat.Text);
-            command.Parameters.AddWithValue("@p3", cmbBrans.Text);
-            command.Parameters.AddWithValue("@p4", cmbDoktor.Text);
-            command.ExecuteNonQuery();
-            sqlBaglantisi.Connection().Close();
-            MessageBox.Show("Randevu Oluşturuldu.");
+            //Belirtilen doktora aynı gün, aynı saatte ikinci bir randevu verilmesini engellemek.
+
+            SqlCommand command0 = new SqlCommand("select * from Randevular where RandevuDoktor=@p1 and RandevuTarih=@p2 and RandevuSaat=@p3", sqlBaglantisi.Connection());
+            command0.Parameters.AddWithValue("p1", cmbDoktor.Text);
+            command0.Parameters.AddWithValue("p2", mskTarih.Text);
+            command0.Parameters.AddWithValue("p3", mskSaat.Text);
+            SqlDataReader dataReader = command0.ExecuteReader();
+            if (dataReader.Read())
+            {
+                MessageBox.Show("Aynı günün aynı saatinde ve aynı doktora ikinci bir randevu oluşturulamaz.", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                sqlBaglantisi.Connection().Close();
+            }
+            else
+            {
+                SqlCommand command = new SqlCommand("insert into Randevular (RandevuTarih, RandevuSaat,RandevuBrans,RandevuDoktor)" +
+                    "values (@p1,@p2,@p3,@p4)", sqlBaglantisi.Connection());
+                command.Parameters.AddWithValue("@p1", mskTarih.Text);
+                command.Parameters.AddWithValue("@p2", mskSaat.Text);
+                command.Parameters.AddWithValue("@p3", cmbBrans.Text);
+                command.Parameters.AddWithValue("@p4", cmbDoktor.Text);
+                command.ExecuteNonQuery();
+                sqlBaglantisi.Connection().Close();
+                MessageBox.Show("Randevu Oluşturuldu.");
+            }
         }
 
         private void cmbBrans_SelectedIndexChanged(object sender, EventArgs e)
@@ -94,13 +109,14 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
         {
             FrmDoktorPanel frmDoktorPanel = new FrmDoktorPanel();
             frmDoktorPanel.Show();
-            
+
         }
 
         private void btnBransPanel_Click(object sender, EventArgs e)
         {
             FrmBrans frmBrans = new FrmBrans();
             frmBrans.Show();
+
         }
 
         private void btnRandevuListe_Click(object sender, EventArgs e)
@@ -108,7 +124,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             FrmRandevuListe frmRandevuListe = new FrmRandevuListe();
             frmRandevuListe.Show();
         }
-        
+
         // pass
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
@@ -122,5 +138,16 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             FrmDoktorDuyurular duyurular = new FrmDoktorDuyurular();
             duyurular.Show();
         }
+
+        private void btnGoBack_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Hesaptan çıkış yapmaktan emin misiniz?", "Uyarı!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (result == DialogResult.OK)
+            {
+                FrmSekreterGiris frmSekreterGiris = new FrmSekreterGiris();
+                frmSekreterGiris.Show();
+                this.Hide();
+            }
+        }
     }
-}   
+}

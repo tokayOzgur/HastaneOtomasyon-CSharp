@@ -15,6 +15,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
         {
             InitializeComponent();
         }
+
         SqlBaglantisi sqlBaglantisi = new SqlBaglantisi();
         private void FrmBrans_Load(object sender, EventArgs e)
         {
@@ -31,7 +32,6 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             command.ExecuteNonQuery();
             sqlBaglantisi.Connection().Close();
             MessageBox.Show("Kayıt başarılı.");
-            dataGridView1.Update();
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
@@ -41,7 +41,6 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             command.Parameters.AddWithValue("@p2", txtId.Text);
             sqlBaglantisi.Connection().Close();
             MessageBox.Show("Güncelleme işlemi başarılı.");
-            dataGridView1.Update();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -53,15 +52,15 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Kullanıcıyı silmek istediğinizden emin misiniz?", "Uyarı!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Branşı silmek istediğinizden emin misiniz?", "Uyarı!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (result == DialogResult.Yes)
             {
                 SqlCommand command = new SqlCommand("delete from Branslar where BransId=@p1", sqlBaglantisi.Connection());
                 command.Parameters.AddWithValue("@p1", txtId.Text);
                 command.ExecuteNonQuery(); // kpmutu çalıştır (Bu fonksiyon; select, insert, update 'de çalışır).
+                dataGridView1.Refresh();
                 sqlBaglantisi.Connection().Close();
-                dataGridView1.Update();
             }
         }
     }

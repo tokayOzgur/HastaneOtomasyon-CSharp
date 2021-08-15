@@ -29,6 +29,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDoktorBilgiDuzenle));
             this.btnGiris = new System.Windows.Forms.Button();
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.txtSoyisim = new System.Windows.Forms.TextBox();
@@ -66,7 +67,6 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             // 
             this.txtSoyisim.Location = new System.Drawing.Point(313, 194);
             this.txtSoyisim.Name = "txtSoyisim";
-            this.txtSoyisim.PasswordChar = '*';
             this.txtSoyisim.Size = new System.Drawing.Size(226, 39);
             this.txtSoyisim.TabIndex = 35;
             // 
@@ -74,7 +74,6 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             // 
             this.txtIsim.Location = new System.Drawing.Point(313, 137);
             this.txtIsim.Name = "txtIsim";
-            this.txtIsim.PasswordChar = '*';
             this.txtIsim.Size = new System.Drawing.Size(226, 39);
             this.txtIsim.TabIndex = 36;
             // 
@@ -142,8 +141,10 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             // 
             // FrmDoktorBilgiDuzenle
             // 
+            this.AcceptButton = this.btnGiris;
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(648, 522);
             this.Controls.Add(this.cmbBrans);
             this.Controls.Add(this.btnGiris);
@@ -157,7 +158,9 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
+            this.MaximizeBox = false;
             this.Name = "FrmDoktorBilgiDuzenle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Doktor Bilgi Güncelle";

@@ -43,6 +43,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnGoBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cmbCinsiyet
@@ -53,7 +54,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             "Kadın"});
             this.cmbCinsiyet.Location = new System.Drawing.Point(337, 377);
             this.cmbCinsiyet.Name = "cmbCinsiyet";
-            this.cmbCinsiyet.Size = new System.Drawing.Size(226, 38);
+            this.cmbCinsiyet.Size = new System.Drawing.Size(226, 40);
             this.cmbCinsiyet.TabIndex = 25;
             // 
             // btnGiris
@@ -73,21 +74,21 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.txtSifre.Location = new System.Drawing.Point(337, 314);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.PasswordChar = '*';
-            this.txtSifre.Size = new System.Drawing.Size(226, 35);
+            this.txtSifre.Size = new System.Drawing.Size(226, 39);
             this.txtSifre.TabIndex = 21;
             // 
             // txtSoyisim
             // 
             this.txtSoyisim.Location = new System.Drawing.Point(337, 186);
             this.txtSoyisim.Name = "txtSoyisim";
-            this.txtSoyisim.Size = new System.Drawing.Size(226, 35);
+            this.txtSoyisim.Size = new System.Drawing.Size(226, 39);
             this.txtSoyisim.TabIndex = 22;
             // 
             // txtIsim
             // 
             this.txtIsim.Location = new System.Drawing.Point(337, 129);
             this.txtIsim.Name = "txtIsim";
-            this.txtIsim.Size = new System.Drawing.Size(226, 35);
+            this.txtIsim.Size = new System.Drawing.Size(226, 39);
             this.txtIsim.TabIndex = 23;
             // 
             // mskTelefon
@@ -95,7 +96,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.mskTelefon.Location = new System.Drawing.Point(337, 247);
             this.mskTelefon.Mask = "(999) 000-0000";
             this.mskTelefon.Name = "mskTelefon";
-            this.mskTelefon.Size = new System.Drawing.Size(226, 35);
+            this.mskTelefon.Size = new System.Drawing.Size(226, 39);
             this.mskTelefon.TabIndex = 19;
             // 
             // mskTc
@@ -103,7 +104,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.mskTc.Location = new System.Drawing.Point(337, 74);
             this.mskTc.Mask = "00000000000";
             this.mskTc.Name = "mskTc";
-            this.mskTc.Size = new System.Drawing.Size(226, 35);
+            this.mskTc.Size = new System.Drawing.Size(226, 39);
             this.mskTc.TabIndex = 20;
             this.mskTc.ValidatingType = typeof(int);
             // 
@@ -112,7 +113,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(218, 380);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 30);
+            this.label7.Size = new System.Drawing.Size(105, 32);
             this.label7.TabIndex = 12;
             this.label7.Text = "Cinsiyet:";
             // 
@@ -121,7 +122,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(218, 314);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 30);
+            this.label6.Size = new System.Drawing.Size(69, 32);
             this.label6.TabIndex = 13;
             this.label6.Text = "Şifre:";
             // 
@@ -130,7 +131,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(185, 186);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 30);
+            this.label4.Size = new System.Drawing.Size(102, 32);
             this.label4.TabIndex = 14;
             this.label4.Text = "Soyisim:";
             // 
@@ -139,7 +140,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(223, 129);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 30);
+            this.label3.Size = new System.Drawing.Size(64, 32);
             this.label3.TabIndex = 15;
             this.label3.Text = "İsim:";
             // 
@@ -148,7 +149,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(149, 250);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(122, 30);
+            this.label5.Size = new System.Drawing.Size(138, 32);
             this.label5.TabIndex = 16;
             this.label5.Text = "Telefon No:";
             // 
@@ -157,16 +158,31 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(123, 77);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 30);
+            this.label2.Size = new System.Drawing.Size(164, 32);
             this.label2.TabIndex = 17;
             this.label2.Text = "TC Kimlik NO:";
             // 
+            // btnGoBack
+            // 
+            this.btnGoBack.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnGoBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGoBack.BackgroundImage")));
+            this.btnGoBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGoBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGoBack.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnGoBack.Location = new System.Drawing.Point(685, 12);
+            this.btnGoBack.Name = "btnGoBack";
+            this.btnGoBack.Size = new System.Drawing.Size(62, 56);
+            this.btnGoBack.TabIndex = 26;
+            this.btnGoBack.UseVisualStyleBackColor = false;
+            this.btnGoBack.Click += new System.EventHandler(this.btnGoBack_Click);
+            // 
             // FrmHastaBilgiDuzenle
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(759, 612);
+            this.Controls.Add(this.btnGoBack);
             this.Controls.Add(this.cmbCinsiyet);
             this.Controls.Add(this.btnGiris);
             this.Controls.Add(this.txtSifre);
@@ -209,5 +225,6 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnGoBack;
     }
 }

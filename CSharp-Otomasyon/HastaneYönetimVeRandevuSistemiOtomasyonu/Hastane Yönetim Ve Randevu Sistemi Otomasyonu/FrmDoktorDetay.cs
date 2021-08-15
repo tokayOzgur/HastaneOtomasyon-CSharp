@@ -33,7 +33,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
 
             //Randevule
             DataTable dataTable = new DataTable();
-            SqlDataAdapter dataAdapter = new SqlDataAdapter("select * from Randevular where RandevuDoktor='" + lblAdSoyad.Text+"'", sqlBaglantisi.Connection());
+            SqlDataAdapter dataAdapter = new SqlDataAdapter("select * from Randevular where RandevuDoktor='" + lblAdSoyad.Text + "'", sqlBaglantisi.Connection());
             dataAdapter.Fill(dataTable);
             dataGridView1.DataSource = dataTable;
         }
@@ -62,6 +62,17 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
         {
             int secilen = dataGridView1.SelectedCells[0].RowIndex;
             rtbHastaSikayet.Text = dataGridView1.Rows[secilen].Cells[7].Value.ToString();
+        }
+
+        private void btnGoBack_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Hesabınızdan çıkış yapmak istediğinize emin misiniz?", "Uyarı!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                FrmDoktorGiris frmDoktorGiris = new FrmDoktorGiris();
+                frmDoktorGiris.Show();
+                this.Hide();
+            }
         }
     }
 }

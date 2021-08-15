@@ -19,5 +19,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
 
             return connect;
         }
+
+        
     }
 }

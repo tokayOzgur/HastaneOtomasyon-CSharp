@@ -37,5 +37,12 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             }
             sqlBaglantisi.Connection().Close();
         }
+
+        private void btnGoBack_Click(object sender, EventArgs e)
+        {
+            FrmGirisler frmGirisler = new FrmGirisler();
+            frmGirisler.Show();
+            this.Hide();
+        }
     }
 }

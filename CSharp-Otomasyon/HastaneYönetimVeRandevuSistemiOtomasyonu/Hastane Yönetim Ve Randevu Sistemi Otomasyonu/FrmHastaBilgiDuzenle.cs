@@ -52,5 +52,12 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             sqlBaglantisi.Connection().Close();
             MessageBox.Show("Bilgileriniz Başarılı Bir Şekilde Güncellendi.", "Bilgilendirme!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void btnGoBack_Click(object sender, EventArgs e)
+        {
+            FrmHastaDetay frmHastaDetay = new FrmHastaDetay();
+            frmHastaDetay.Show();
+            this.Hide();
+        }
     }
 }

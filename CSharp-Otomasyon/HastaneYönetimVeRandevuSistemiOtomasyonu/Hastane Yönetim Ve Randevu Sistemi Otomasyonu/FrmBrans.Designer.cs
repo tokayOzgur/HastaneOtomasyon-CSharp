@@ -131,7 +131,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             // 
             this.txtId.Location = new System.Drawing.Point(155, 72);
             this.txtId.Name = "txtId";
-            this.txtId.PasswordChar = '*';
+            this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(226, 39);
             this.txtId.TabIndex = 38;
             // 
@@ -152,6 +152,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
+            this.MaximizeBox = false;
             this.Name = "FrmBrans";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmBrans";

@@ -29,6 +29,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSekreterDetay));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblAdSoyad = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,18 +39,12 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.btnDuyuruYayinla = new System.Windows.Forms.Button();
             this.rtbDuyuru = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnSil = new System.Windows.Forms.Button();
-            this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnKaydet = new System.Windows.Forms.Button();
-            this.chkOnay = new System.Windows.Forms.CheckBox();
             this.cmbDoktor = new System.Windows.Forms.ComboBox();
             this.cmbBrans = new System.Windows.Forms.ComboBox();
             this.mskSaat = new System.Windows.Forms.MaskedTextBox();
-            this.mskHastaTc = new System.Windows.Forms.MaskedTextBox();
             this.mskTarih = new System.Windows.Forms.MaskedTextBox();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -64,6 +59,8 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.btnRandevuListe = new System.Windows.Forms.Button();
             this.btnBransPanel = new System.Windows.Forms.Button();
             this.btnDoktorPanel = new System.Windows.Forms.Button();
+            this.btnGoBack = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -81,7 +78,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.groupBox1.Controls.Add(this.lblTc);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 15.70909F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 65);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(435, 160);
             this.groupBox1.TabIndex = 1;
@@ -133,7 +130,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.groupBox2.Controls.Add(this.btnDuyuruYayinla);
             this.groupBox2.Controls.Add(this.rtbDuyuru);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 15.70909F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.groupBox2.Location = new System.Drawing.Point(12, 179);
+            this.groupBox2.Location = new System.Drawing.Point(12, 222);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(435, 295);
             this.groupBox2.TabIndex = 2;
@@ -160,81 +157,41 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.btnSil);
-            this.groupBox3.Controls.Add(this.btnGuncelle);
             this.groupBox3.Controls.Add(this.btnKaydet);
-            this.groupBox3.Controls.Add(this.chkOnay);
             this.groupBox3.Controls.Add(this.cmbDoktor);
             this.groupBox3.Controls.Add(this.cmbBrans);
             this.groupBox3.Controls.Add(this.mskSaat);
-            this.groupBox3.Controls.Add(this.mskHastaTc);
             this.groupBox3.Controls.Add(this.mskTarih);
             this.groupBox3.Controls.Add(this.txtId);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 15.70909F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.groupBox3.Location = new System.Drawing.Point(453, 12);
+            this.groupBox3.Location = new System.Drawing.Point(453, 65);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(383, 734);
+            this.groupBox3.Size = new System.Drawing.Size(383, 342);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Randevular";
-            // 
-            // btnSil
-            // 
-            this.btnSil.BackColor = System.Drawing.Color.DarkRed;
-            this.btnSil.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSil.Location = new System.Drawing.Point(28, 657);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(343, 71);
-            this.btnSil.TabIndex = 5;
-            this.btnSil.Text = "Sil";
-            this.btnSil.UseVisualStyleBackColor = false;
-            // 
-            // btnGuncelle
-            // 
-            this.btnGuncelle.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnGuncelle.ForeColor = System.Drawing.Color.White;
-            this.btnGuncelle.Location = new System.Drawing.Point(28, 562);
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(343, 71);
-            this.btnGuncelle.TabIndex = 5;
-            this.btnGuncelle.Text = "Güncelle";
-            this.btnGuncelle.UseVisualStyleBackColor = false;
-            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnKaydet
             // 
             this.btnKaydet.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnKaydet.ForeColor = System.Drawing.Color.White;
-            this.btnKaydet.Location = new System.Drawing.Point(28, 464);
+            this.btnKaydet.Location = new System.Drawing.Point(34, 278);
             this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(343, 71);
+            this.btnKaydet.Size = new System.Drawing.Size(343, 53);
             this.btnKaydet.TabIndex = 5;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = false;
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
-            // chkOnay
-            // 
-            this.chkOnay.AutoSize = true;
-            this.chkOnay.Font = new System.Drawing.Font("Segoe UI Semibold", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.chkOnay.Location = new System.Drawing.Point(137, 376);
-            this.chkOnay.Name = "chkOnay";
-            this.chkOnay.Size = new System.Drawing.Size(90, 36);
-            this.chkOnay.TabIndex = 4;
-            this.chkOnay.Text = "Onay";
-            this.chkOnay.UseVisualStyleBackColor = true;
-            // 
             // cmbDoktor
             // 
             this.cmbDoktor.FormattingEnabled = true;
-            this.cmbDoktor.Location = new System.Drawing.Point(135, 272);
+            this.cmbDoktor.Location = new System.Drawing.Point(135, 230);
             this.cmbDoktor.Name = "cmbDoktor";
             this.cmbDoktor.Size = new System.Drawing.Size(241, 40);
             this.cmbDoktor.TabIndex = 3;
@@ -242,7 +199,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             // cmbBrans
             // 
             this.cmbBrans.FormattingEnabled = true;
-            this.cmbBrans.Location = new System.Drawing.Point(135, 222);
+            this.cmbBrans.Location = new System.Drawing.Point(135, 182);
             this.cmbBrans.Name = "cmbBrans";
             this.cmbBrans.Size = new System.Drawing.Size(241, 40);
             this.cmbBrans.TabIndex = 3;
@@ -251,27 +208,17 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             // mskSaat
             // 
             this.mskSaat.Font = new System.Drawing.Font("Segoe UI Semibold", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.mskSaat.Location = new System.Drawing.Point(136, 177);
+            this.mskSaat.Location = new System.Drawing.Point(136, 135);
             this.mskSaat.Mask = "00:00";
             this.mskSaat.Name = "mskSaat";
             this.mskSaat.Size = new System.Drawing.Size(240, 39);
             this.mskSaat.TabIndex = 2;
             this.mskSaat.ValidatingType = typeof(System.DateTime);
             // 
-            // mskHastaTc
-            // 
-            this.mskHastaTc.Font = new System.Drawing.Font("Segoe UI Semibold", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.mskHastaTc.Location = new System.Drawing.Point(136, 320);
-            this.mskHastaTc.Mask = "00000000000";
-            this.mskHastaTc.Name = "mskHastaTc";
-            this.mskHastaTc.Size = new System.Drawing.Size(240, 39);
-            this.mskHastaTc.TabIndex = 2;
-            this.mskHastaTc.ValidatingType = typeof(int);
-            // 
             // mskTarih
             // 
             this.mskTarih.Font = new System.Drawing.Font("Segoe UI Semibold", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.mskTarih.Location = new System.Drawing.Point(137, 121);
+            this.mskTarih.Location = new System.Drawing.Point(137, 87);
             this.mskTarih.Mask = "00/00/0000";
             this.mskTarih.Name = "mskTarih";
             this.mskTarih.Size = new System.Drawing.Size(240, 39);
@@ -280,36 +227,16 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(137, 64);
+            this.txtId.Location = new System.Drawing.Point(137, 41);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(240, 39);
             this.txtId.TabIndex = 1;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(28, 376);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(102, 32);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Durum: ";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(6, 327);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(124, 32);
-            this.label8.TabIndex = 0;
-            this.label8.Text = " Hasta TC:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(33, 275);
+            this.label7.Location = new System.Drawing.Point(33, 233);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(97, 32);
             this.label7.TabIndex = 0;
@@ -319,7 +246,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(48, 225);
+            this.label6.Location = new System.Drawing.Point(48, 185);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 32);
             this.label6.TabIndex = 0;
@@ -329,7 +256,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(55, 180);
+            this.label5.Location = new System.Drawing.Point(55, 138);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 32);
             this.label5.TabIndex = 0;
@@ -339,7 +266,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(49, 124);
+            this.label4.Location = new System.Drawing.Point(49, 90);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 32);
             this.label4.TabIndex = 0;
@@ -349,7 +276,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(89, 67);
+            this.label2.Location = new System.Drawing.Point(89, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 32);
             this.label2.TabIndex = 0;
@@ -359,7 +286,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             // 
             this.groupBox4.Controls.Add(this.dataGridView1);
             this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 15.70909F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.groupBox4.Location = new System.Drawing.Point(857, 12);
+            this.groupBox4.Location = new System.Drawing.Point(857, 65);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(531, 359);
             this.groupBox4.TabIndex = 4;
@@ -381,9 +308,9 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             // 
             this.groupBox5.Controls.Add(this.dataGridView2);
             this.groupBox5.Font = new System.Drawing.Font("Segoe UI", 15.70909F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.groupBox5.Location = new System.Drawing.Point(857, 377);
+            this.groupBox5.Location = new System.Drawing.Point(453, 426);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(531, 369);
+            this.groupBox5.Size = new System.Drawing.Size(935, 369);
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Doktorlar";
@@ -396,7 +323,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.dataGridView2.Location = new System.Drawing.Point(3, 35);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 47;
-            this.dataGridView2.Size = new System.Drawing.Size(525, 331);
+            this.dataGridView2.Size = new System.Drawing.Size(929, 331);
             this.dataGridView2.TabIndex = 0;
             // 
             // groupBox6
@@ -406,7 +333,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.groupBox6.Controls.Add(this.btnBransPanel);
             this.groupBox6.Controls.Add(this.btnDoktorPanel);
             this.groupBox6.Font = new System.Drawing.Font("Segoe UI", 15.70909F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.groupBox6.Location = new System.Drawing.Point(12, 476);
+            this.groupBox6.Location = new System.Drawing.Point(12, 523);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(435, 270);
             this.groupBox6.TabIndex = 5;
@@ -461,11 +388,39 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.btnDoktorPanel.UseVisualStyleBackColor = false;
             this.btnDoktorPanel.Click += new System.EventHandler(this.btnDoktorPanel_Click);
             // 
+            // btnGoBack
+            // 
+            this.btnGoBack.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnGoBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGoBack.BackgroundImage")));
+            this.btnGoBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGoBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGoBack.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnGoBack.Location = new System.Drawing.Point(1326, 12);
+            this.btnGoBack.Name = "btnGoBack";
+            this.btnGoBack.Size = new System.Drawing.Size(62, 56);
+            this.btnGoBack.TabIndex = 6;
+            this.btnGoBack.UseVisualStyleBackColor = false;
+            this.btnGoBack.Click += new System.EventHandler(this.btnGoBack_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Algerian", 22.25455F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label10.Location = new System.Drawing.Point(12, 12);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(448, 39);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Sekreter Detay Panel";
+            // 
             // FrmSekreterDetay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1400, 757);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(1400, 807);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.btnGoBack);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -473,8 +428,11 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
+            this.MaximizeBox = false;
             this.Name = "FrmSekreterDetay";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sekreter Detay Paneli";
             this.Load += new System.EventHandler(this.FrmSekreterDetay_Load);
             this.groupBox1.ResumeLayout(false);
@@ -488,6 +446,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -516,7 +475,6 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
         private System.Windows.Forms.ComboBox cmbDoktor;
         private System.Windows.Forms.ComboBox cmbBrans;
         private System.Windows.Forms.MaskedTextBox mskHastaTc;
-        private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -528,5 +486,7 @@ namespace Hastane_Yönetim_Ve_Randevu_Sistemi_Otomasyonu
         private System.Windows.Forms.Button btnRandevuListe;
         private System.Windows.Forms.Button btnBransPanel;
         private System.Windows.Forms.Button btnDuyuru;
+        private System.Windows.Forms.Button btnGoBack;
+        private System.Windows.Forms.Label label10;
     }
 }
